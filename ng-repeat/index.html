@@ -1,0 +1,32 @@
+ <!doctype html>
+<html ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+<div ng-controller="MainController">
+  <div ng-repeat="element in myArr track by $index">
+    {{element}} : {{$index}}
+    <span ng-show="$first">first</span>
+    <span ng-show="$middle">middle</span>
+    <span ng-show="$last">last</span>
+    <span ng-show="$even">first</span>
+    <span ng-show="$odd">odd</span>
+  </div>
+
+  <div ng-repeat-start="user in users">
+    <strong>{{user.name}}</strong>
+  </div>
+  <hr ng-repeat-end />
+
+  <div ng-repeat="attr in ob">
+    {{attr}}
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

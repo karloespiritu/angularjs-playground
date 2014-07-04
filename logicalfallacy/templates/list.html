@@ -1,0 +1,35 @@
+<section class="artistpage">
+  <div class="search">
+    <h1>Logical Fallacies</h1>
+    <label>search: </label>
+    <input ng-model="query" placeholder="Search for fallacy" autofocus>
+
+    <label class="formgroup">by:
+      <select ng-model="fallacyOrder">
+        <option value="title">Name</option>
+        <option value="head">Description</option>
+      </select>
+    </label>
+
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" checked>
+      ascending
+     </label>
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" value="reverse">
+      descending
+    </label>
+
+  </div>
+  <ul class="fallacylist">
+    <li class="fallacy cf" ng-repeat="item in fallacies | filter: query | orderBy: fallacyOrder:direction">
+      <a href="#/details/{{fallacies.indexOf(item)}}">
+        <img ng-src="images/icon-{{item.name}}.png" alt="Photo of {{item.title}}">
+        <div class="info">
+          <h2>{{item.title}}</h2>
+          <h3>{{item.head}}</h3>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>

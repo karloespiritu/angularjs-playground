@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div ng-controller="MainController">
+
+<!-- Floor: <input type='text' ng-model='floor' ng-init='floor = 1' /><br />
+    Ceiling: <input type='text' ng-model='ceiling' ng-init='ceiling = 3' /><br />
+    Step Width: <input type='text' ng-model='step' ng-init='step = 1' /><br />
+    Precision: <input type='text' ng-model='precision' ng-init='precision = 0' /><br />
+    Buffer: <input type='text' ng-model='buffer' ng-init='buffer = 2' /><br />
+    Stickiness: <input type='text' ng-model='stickiness' ng-init='stickiness = 3' /><br />
+    Slider Widths: <input type="text" ng-model="sliderWidth" ng-init="sliderWidth = '370px'" ng-change="fireResizeEvent()" />
+    <h2>Normal</h2> -->
+    <h3>Debug</h3>
+    <!-- <slider floor="1" ceiling="3" step='{{ step }}' precision='{{ precision }}' stickiness='{{ stickiness }}'
+              ng-model='value' style="width: {{ sliderWidth }};"></slider> -->
+    <slider floor="1" ceiling="3" step="1" precision="0" stickiness="1"
+              ng-model='level' style="width: 370px;"></slider>
+    Value: <input ng-model="level" type="text" />
+
+</div>
+
+
+<script src="angular.min.js"></script>
+<script src="angular-touch.min.js"></script>
+<script src="bower_components/venturocket-angular-slider/build/angular-slider.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
