@@ -15,12 +15,12 @@
 <body>
 
 <div ng-controller="MainController">
-  <h1 ng-class="{orange:false}">Hello </h1>
+  <h1 ng-class="{orange: classVar, italic: classVar}">Hello there!</h1>
 
   <div ng-include="'test.html'"></div>
 
 <script type="text/ng-template" id="test.html">
-<h1>My Template</h1>
+  <h1>My Template</h1>
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
