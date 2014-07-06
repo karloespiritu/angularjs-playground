@@ -17,6 +17,17 @@
 <div ng-controller="MainController">
   <h1 ng-class="{orange: classVar, italic: classVar}">Hello there!</h1>
 
+  <input ng-model="mydata.val">
+  <input ng-model="mydata.val">
+  <input ng-model="mydata.val">
+  <button ng-click="mydata.val='123'">123</button>
+  <h1>{{mydata.val}}</h1>
+
+  <!--sub controller-->
+  <div ng-controller="SubController">
+    <input ng-model="mydata.val">
+    <h1>{{mydata.val}}</h1>
+  </div>
   <div ng-include="'test.html'"></div>
 
 <script type="text/ng-template" id="test.html">
