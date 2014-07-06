@@ -6,8 +6,7 @@ app.controller('MainController', function($scope) {
 
   $scope.inc = function() {
     $scope.val += 1;
-    $scope.even = $scope.val%2==0
+    $scope.even = $scope.val%2==0;
   }
-
 
 });
