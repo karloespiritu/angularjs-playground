@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="app.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body ng-controller="MainController">
+
+    <div>
+      <div class="btn-group" dropdown>
+        <button type="button" class="btn btn-default dropdown-toggle" ng-click="selectNotificationType()">{{selectedNotificationType.name}} <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li ng-repeat="type in selectedNotificationTypes">
+            <a href="#" ng-click="setNotificationType(type)">{{type.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
