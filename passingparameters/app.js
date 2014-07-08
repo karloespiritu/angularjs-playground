@@ -3,7 +3,9 @@ var app = angular.module('myApp', []);
 app.factory('Data', function () {
 
   return {
-    message: "I'm a message from a service"
+    title: "title text",
+    message: "I'm a message from a service",
+    date: "2014-01-29"
   }
 })
 
