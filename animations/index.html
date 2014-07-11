@@ -1,0 +1,55 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <div ng-controller="MainController">
+
+      <div class="container">
+        <div class="row">
+          <div class="well">
+          <h3>{{val}}</h3>
+            <button class="btn btn-block btn-primary"  ng-click="inc()">Click</button>
+            <h2 ng-show="even">even</h2>
+            <h2 ng-hide="even">odd</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div ng-show="five">
+            <h1>Now, I am visible</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="well">
+            <button class="btn btn-block btn-info" ng-click="testClick()">Multiples of 5</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <tabset>
+            <tab heading="Static title">Static content</tab>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+              {{tab.content}}
+            </tab>
+            <tab select="alertMe()">
+              <tab-heading>
+                <i class="glyphicon glyphicon-bell"></i> Alert!
+              </tab-heading>
+              I've got an HTML heading, and a select callback. Pretty cool!
+            </tab>
+          </tabset>
+
+      </div>
+
+
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-animate.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
