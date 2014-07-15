@@ -12,6 +12,26 @@
       <div class="container">
         <div class="row">
           <div class="well">
+
+          Click me: <input type="checkbox" ng-model="checked"><br/>
+          <div>
+            Show:
+            <div class="check-element animate-show" ng-show="checked">
+              <span class="glyphicon glyphicon-thumbs-up"></span> I show up when your checkbox is checked.
+            </div>
+          </div>
+          <div>
+            Hide:
+            <div class="check-element animate-show" ng-hide="checked">
+              <span class="glyphicon glyphicon-thumbs-down"></span> I hide when your checkbox is checked.
+            </div>
+          </div>
+
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="well">
           <h3>{{val}}</h3>
             <button class="btn btn-block btn-primary"  ng-click="inc()">Click</button>
             <h2 ng-show="even">even</h2>
@@ -42,14 +62,13 @@
               I've got an HTML heading, and a select callback. Pretty cool!
             </tab>
           </tabset>
-
       </div>
 
 
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
