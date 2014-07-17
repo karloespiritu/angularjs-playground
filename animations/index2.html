@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example43-production</title>
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="app.css">
+
+</head>
+<body ng-app="MyApp">
+  Click me: <input type="checkbox" ng-model="checked"><br/>
+  <div>
+    Show:
+    <div class="check-element animate-show" ng-show="checked">
+      <span class="glyphicon glyphicon-thumbs-up"></span> I show up when your checkbox is checked.
+    </div>
+  </div>
+  <div>
+    Hide:
+    <div class="check-element animate-show" ng-hide="checked">
+      <span class="glyphicon glyphicon-thumbs-down"></span> I hide when your checkbox is checked.
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.js"></script>
+  <script type="text/javascript">
+  //replace this with whatever your module ends up being
+    var myApp = angular.module('MyApp', ['ngAnimate']);
+  </script>
+</body>
+</html>
