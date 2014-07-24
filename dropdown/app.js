@@ -1,17 +1,22 @@
 var app = angular.module('app', ['ui.bootstrap']);
 
 app.controller('MainController', function($scope) {
+
   $scope.selectedNotificationTypes = [
-    {id: 'action1', name: 'Alert'},
-    {id: 'action2', name: 'Trend'},
-    {id: 'action3', name: 'Abbjbj'}
+    {id: 'ALERT', name: 'Alert'},
+    {id: 'TREND', name: 'Trend'},
+    {id: 'TYPE3', name: 'TYPE3'}
   ];
-  $scope.selectedNotificationType = $scope.selectedNotificationTypes[0];
+
+  $scope.selectedNotificationData = {};
+  $scope.selectedNotificationData.type="";
+
+  $scope.selectedNotificationData.type = $scope.selectedNotificationTypes[0].name;
+
   $scope.setNotificationType = function(type) {
-    $scope.selectedNotificationType = type;
-    $scope.selectType();
+    $scope.selectedNotificationData.type = type;
+    console.log("type = "+JSON.stringify($scope.selectedNotificationData.type));
+    // $scope.selectType();
   };
-  $scope.selectType = function() {
-    console.log($scope.selectedNotificationType.id);
-  };
+
 });

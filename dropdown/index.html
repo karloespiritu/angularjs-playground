@@ -1,23 +1,30 @@
 <!doctype html>
 <html ng-app="app">
-  <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
-    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
-    <script src="app.js"></script>
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body ng-controller="MainController">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+  .na-notification-details-input{
+    width: 370px;
+  }
+  </style>
+</head>
+<body ng-controller="MainController">
 
     <div>
       <div class="btn-group" dropdown>
-        <button type="button" class="btn btn-default dropdown-toggle" ng-click="selectNotificationType()">{{selectedNotificationType.name}} <span class="caret"></span></button>
-        <ul class="dropdown-menu" role="menu">
+        <input type="text"  value="{{selectedNotificationData.type}}">
+        <button  type="button" class="btn btn-default dropdown-toggle na-notification-details-input pull-left," ng-click="setNotificationType(type)"> <span class="glyphicon glyphicon-chevron-down pull-right"></span></button>
+        <ul class="dropdown-menu na-notification-details-input" role="menu">
           <li ng-repeat="type in selectedNotificationTypes">
             <a href="#" ng-click="setNotificationType(type)">{{type.name}}</a>
           </li>
         </ul>
       </div>
+       <h1>ID: {{type.id}}</h1>
     </div>
 
-  </body>
+  <script src="js/angular.js"></script>
+  <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+  <script src="app.js"></script>
+</body>
 </html>
