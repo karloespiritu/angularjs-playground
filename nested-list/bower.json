@@ -1,0 +1,27 @@
+{
+  "name": "nested-list",
+  "version": "0.0.0",
+  "homepage": "https://github.com/karloespiritu/angularjs-playground",
+  "authors": [
+    "Karlo Espiritu <karloespiritu@gmail.com>"
+  ],
+  "description": "Nested List",
+  "main": "app.js",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": ">= 1.2.0",
+    "bootstrap": "~3.1.0",
+    "jquery": ">=1.10.x",
+    "jasmine-jquery": "~1.0.0",
+    "angular-mocks": "~1.2.11",
+    "firebase": "~1.0.11",
+    "angularfire": "~0.7.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
